@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "bmad": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["tools/mcp-server/index.js"],
+      "env": {
+        "NODE_NO_WARNINGS": "1"
+      }
+    }
+  }
+}

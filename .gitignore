@@ -48,6 +48,15 @@ CLAUDE.local.md
 .bmad-creator-tools
 test-project-install/*
 sample-project/*
+
+# Codebase flattener output
+/codebase.md
+
+# MCP Server - Embedded assets and spike artifacts
+/tools/mcp-server/embedded/
+/tools/mcp-server/spike/embedded/
+/tools/mcp-server/spike/*.tgz
+/tools/mcp-server/*.tgz
 flattened-codebase.xml
 *.stats.md
 .internal-docs/
@@ -60,3 +69,5 @@ tools/template-test-generator/test-scenarios/
 # Test Install Output
 
 z*/
+/bmad/
+bin/graph

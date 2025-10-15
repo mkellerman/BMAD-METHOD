@@ -71,6 +71,44 @@ The Core Module will always be installed. The default initial module selection w
 
 This is intentional and not a bug - it will copy over to those other folders only the minimum that is needed because it is shared across the modules. For example, during Alpha to test this feature, BMM relies on the brainstorming feature of the CIS and some items from CORE - so even if you only select BMM, you will still see bmad/core and bmad/cis along with bmad/bmm.
 
+### Alternative: Use BMAD via MCP Server (No Installation Required!)
+
+Want to try BMAD without installing files to your project? Use the **BMAD MCP Server** for instant access to all agents and workflows through IDEs that support the Model Context Protocol (MCP).
+
+**Quick Setup:**
+
+```bash
+npm install -g @bmad/mcp-server
+```
+
+Then configure your IDE (Claude Desktop, Cline, Windsurf, Cursor, etc.) to use the BMAD MCP server. See **[MCP Server Documentation](./tools/mcp-server/README.md)** for complete setup instructions.
+
+**Benefits:**
+
+- ✅ No files installed to your project
+- ✅ Single tool entry point (`bmad`) for all functionality
+- ✅ BMad Master guides you through all capabilities
+- ✅ Natural language routing: "I want to plan a project"
+- ✅ Access to 11+ agents and 46 workflows
+- ✅ Perfect for trying BMAD before full installation
+
+**Usage Example:**
+
+```
+Use bmad
+```
+
+This loads BMad Master who will guide you through available options. You can also directly request agents or workflows:
+
+```
+Use bmad with agent: "pm"
+Use bmad with message: "I want to plan a software project"
+```
+
+📖 **[Full MCP Server Documentation →](./tools/mcp-server/README.md)**
+
+---
+
 ## What is the new BMad Core
 
 BMad-CORE (Collaboration Optimized Reflection Engine) is a framework that brings out the best in you through AI agents designed to enhance human thinking rather than replace it.

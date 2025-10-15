@@ -1,0 +1,64 @@
+{
+  "name": "@bmad/mcp-server",
+  "version": "0.1.0",
+  "description": "Self-contained BMAD MCP Server - Multi-agent AI collaboration for VS Code and compatible IDEs",
+  "keywords": [
+    "bmad",
+    "mcp",
+    "model-context-protocol",
+    "ai-agents",
+    "agents",
+    "workflows",
+    "party-mode",
+    "agent-orchestration",
+    "claude",
+    "cline",
+    "windsurf",
+    "cursor"
+  ],
+  "homepage": "https://github.com/bmad-code-org/BMAD-METHOD/tree/main/tools/mcp-server#readme",
+  "bugs": {
+    "url": "https://github.com/bmad-code-org/BMAD-METHOD/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmad-code-org/BMAD-METHOD.git",
+    "directory": "tools/mcp-server"
+  },
+  "license": "MIT",
+  "author": "Brian (BMad) Madison",
+  "main": "index.js",
+  "bin": {
+    "bmad-mcp": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "lib/**/*",
+    "embedded/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "prebuild": "node build.js --clean",
+    "build": "node build.js",
+    "build:force": "node build.js --clean --force",
+    "prepack": "npm run build",
+    "prepublishOnly": "npm run build && npm test",
+    "start": "node index.js",
+    "test": "node test-embedded.js",
+    "validate": "node -e \"require('./embedded/manifest.json'); console.log('✓ Manifest valid')\""
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.0",
+    "fs-extra": "^11.2.0",
+    "glob": "^10.3.10",
+    "js-yaml": "^4.1.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "csv-parse": "^5.5.6"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
