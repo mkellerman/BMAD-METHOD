@@ -354,7 +354,7 @@ A: No! Analysis is entirely optional. Use only workflows that help you think thr
 A: If unsure, start with `research` (market type) to validate viability, then move to `product-brief` or `game-brief`.
 
 **Q: Can I skip straight to Planning?**
-A: Yes! If you know what you're building and why, skip Phase 1 entirely and start with Phase 2 (prd/gdd/tech-spec).
+A: Yes! If you know what you're building and why, skip Phase 1 entirely and start with Phase 2 (prd/tech-spec).
 
 **Q: How long should Analysis take?**
 A: Typically hours to 1-2 days. If taking longer, you may be over-analyzing. Move to Planning.
