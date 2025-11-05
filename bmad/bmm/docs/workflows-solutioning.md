@@ -19,7 +19,7 @@ Phase 3 (Solutioning) workflows translate **what** to build (from Planning) into
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#fff','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','fontSize':'16px','fontFamily':'arial'}}}%%
 graph TB
-    FromPlanning["<b>FROM Phase 2 Planning</b><br/>PRD/GDD/Tech-Spec complete"]
+    FromPlanning["<b>FROM Phase 2 Planning</b><br/>PRD/Tech-Spec complete"]
 
     subgraph QuickFlow["<b>QUICK FLOW PATH</b>"]
         direction TB

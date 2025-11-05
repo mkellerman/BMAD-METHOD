@@ -188,7 +188,7 @@ The system guides but never forces. You can override recommendations.
 
 **Agent:** PM (orchestrates others as needed)
 
-**Always Use:** This is your planning starting point. Don't call prd/gdd/tech-spec directly unless skipping discovery.
+**Always Use:** This is your planning starting point. Don't call prd/tech-spec directly unless skipping discovery.
 
 **Process:**
 
