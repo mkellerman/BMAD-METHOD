@@ -1,0 +1,11 @@
+# Debug Report Workflow Configuration
+name: "debug-report"
+description: "Generate comprehensive debug report from current session with findings and recommendations."
+author: "Diana"
+
+config_source: "{project-root}/bmad/bmm/config.yaml"
+output_folder: "{config_source}:output_folder"
+installed_path: "{project-root}/bmad/bmm/workflows/debug/debug-report"
+instructions: "{installed_path}/instructions.md"
+knowledge_base: "{project-root}/bmad/bmm/knowledge/debug/debug-patterns.md"
+standalone: true

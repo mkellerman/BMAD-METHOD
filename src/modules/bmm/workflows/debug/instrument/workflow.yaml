@@ -1,0 +1,11 @@
+# Instrument Workflow Configuration
+name: "instrument"
+description: "Design strategic logging and monitoring points for enhanced debugging visibility."
+author: "Diana"
+
+config_source: "{project-root}/bmad/bmm/config.yaml"
+output_folder: "{config_source}:output_folder"
+installed_path: "{project-root}/bmad/bmm/workflows/debug/instrument"
+instructions: "{installed_path}/instructions.md"
+knowledge_base: "{project-root}/bmad/bmm/knowledge/debug/debug-patterns.md"
+standalone: true

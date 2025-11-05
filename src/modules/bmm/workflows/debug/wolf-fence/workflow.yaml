@@ -1,0 +1,33 @@
+# Wolf Fence Binary Search Debugging Workflow Configuration
+name: "wolf-fence"
+description: "Execute binary search debugging to isolate bug location efficiently through systematic code region elimination."
+author: "Diana"
+
+# Critical variables from config
+config_source: "{project-root}/bmad/bmm/config.yaml"
+output_folder: "{config_source}:output_folder"
+user_name: "{config_source}:user_name"
+communication_language: "{config_source}:communication_language"
+document_output_language: "{config_source}:document_output_language"
+user_skill_level: "{config_source}:user_skill_level"
+date: system-generated
+
+# Module path and component files
+installed_path: "{project-root}/bmad/bmm/workflows/debug/wolf-fence"
+template: false
+instructions: "{installed_path}/instructions.md"
+
+# Knowledge base integration
+knowledge_base: "{project-root}/bmad/bmm/knowledge/debug/debug-patterns.md"
+
+standalone: true
+
+web_bundle:
+  name: "wolf-fence"
+  description: "Execute binary search debugging to isolate bug location efficiently through systematic code region elimination."
+  author: "Diana"
+  instructions: "bmad/bmm/workflows/debug/wolf-fence/instructions.md"
+  template: false
+  web_bundle_files:
+    - "bmad/bmad/bmm/workflows/debug/wolf-fence/instructions.md"
+    - "bmad/bmm/knowledge/debug/debug-patterns.md"

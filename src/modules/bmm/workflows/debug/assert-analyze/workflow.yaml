@@ -1,0 +1,11 @@
+# Assert Analyze Workflow Configuration
+name: "assert-analyze"
+description: "Analyze code for missing assertions and invariants to improve defensive programming."
+author: "Diana"
+
+config_source: "{project-root}/bmad/bmm/config.yaml"
+output_folder: "{config_source}:output_folder"
+installed_path: "{project-root}/bmad/bmm/workflows/debug/assert-analyze"
+instructions: "{installed_path}/instructions.md"
+knowledge_base: "{project-root}/bmad/bmm/knowledge/debug/common-defects.md"
+standalone: true

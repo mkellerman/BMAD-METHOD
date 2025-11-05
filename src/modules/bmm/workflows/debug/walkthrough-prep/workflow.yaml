@@ -1,0 +1,11 @@
+# Walkthrough Prep Workflow Configuration
+name: "walkthrough-prep"
+description: "Generate materials for code walkthrough session including inspection guides and focus areas."
+author: "Diana"
+
+config_source: "{project-root}/bmad/bmm/config.yaml"
+output_folder: "{config_source}:output_folder"
+installed_path: "{project-root}/bmad/bmm/workflows/debug/walkthrough-prep"
+instructions: "{instructions_path}/instructions.md"
+knowledge_base: "{project-root}/bmad/bmm/knowledge/debug/debug-inspection-checklist.md"
+standalone: true

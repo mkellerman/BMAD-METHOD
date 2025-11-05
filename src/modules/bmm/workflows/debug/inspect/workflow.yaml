@@ -1,0 +1,33 @@
+# Fagan Inspection Workflow Configuration
+name: "inspect"
+description: "Execute comprehensive Fagan inspection workflow for systematic defect detection with 60-90% efficiency rates."
+author: "Diana"
+
+# Critical variables from config
+config_source: "{project-root}/bmad/bmm/config.yaml"
+output_folder: "{config_source}:output_folder"
+user_name: "{config_source}:user_name"
+communication_language: "{config_source}:communication_language"
+document_output_language: "{config_source}:document_output_language"
+user_skill_level: "{config_source}:user_skill_level"
+date: system-generated
+
+# Module path and component files
+installed_path: "{project-root}/bmad/bmm/workflows/debug/inspect"
+template: false
+instructions: "{installed_path}/instructions.md"
+
+# Knowledge base integration
+knowledge_base: "{project-root}/bmad/bmm/knowledge/debug/debug-inspection-checklist.md"
+
+standalone: true
+
+web_bundle:
+  name: "inspect"
+  description: "Execute comprehensive Fagan inspection workflow for systematic defect detection with 60-90% efficiency rates."
+  author: "Diana"
+  instructions: "bmad/bmm/workflows/debug/inspect/instructions.md"
+  template: false
+  web_bundle_files:
+    - "bmad/bmm/workflows/debug/inspect/instructions.md"
+    - "bmad/bmm/knowledge/debug/debug-inspection-checklist.md"

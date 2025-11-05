@@ -1,0 +1,11 @@
+# Delta Minimize Workflow Configuration
+name: "delta-minimize"
+description: "Automatically reduce failing test case to minimal reproduction by systematic elimination."
+author: "Diana"
+
+config_source: "{project-root}/bmad/bmm/config.yaml"
+output_folder: "{config_source}:output_folder"
+installed_path: "{project-root}/bmad/bmm/workflows/debug/delta-minimize"
+instructions: "{installed_path}/instructions.md"
+knowledge_base: "{project-root}/bmad/bmm/knowledge/debug/debug-patterns.md"
+standalone: true

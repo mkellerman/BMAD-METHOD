@@ -1,0 +1,11 @@
+# Static Scan Workflow Configuration
+name: "static-scan"
+description: "Perform comprehensive static analysis for common defects using automated tools and manual inspection."
+author: "Diana"
+
+config_source: "{project-root}/bmad/bmm/config.yaml"
+output_folder: "{config_source}:output_folder"
+installed_path: "{project-root}/bmad/bmm/workflows/debug/static-scan"
+instructions: "{installed_path}/instructions.md"
+knowledge_base: "{project-root}/bmad/bmm/knowledge/debug/common-defects.md"
+standalone: true

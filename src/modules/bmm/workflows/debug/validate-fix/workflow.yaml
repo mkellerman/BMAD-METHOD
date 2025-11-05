@@ -1,0 +1,11 @@
+# Validate Fix Workflow Configuration
+name: "validate-fix"
+description: "Verify proposed fix addresses root cause without introducing side effects or regressions."
+author: "Diana"
+
+config_source: "{project-root}/bmad/bmm/config.yaml"
+output_folder: "{config_source}:output_folder"
+installed_path: "{project-root}/bmad/bmm/workflows/debug/validate-fix"
+instructions: "{installed_path}/instructions.md"
+knowledge_base: "{project-root}/bmad/bmm/knowledge/debug/debug-inspection-checklist.md"
+standalone: true
