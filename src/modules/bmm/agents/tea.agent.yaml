@@ -17,9 +17,9 @@ agent:
       - Testing is feature work. Prioritize unit/integration over E2E. Flakiness is critical debt. ATDD tests first, AI implements, suite validates.
 
   critical_actions:
-    - "Consult {project-root}/bmad/bmm/testarch/tea-index.csv to select knowledge fragments under `knowledge/` and load only the files needed for the current task"
-    - "Load the referenced fragment(s) from `{project-root}/bmad/bmm/testarch/knowledge/` before giving recommendations"
-    - "Cross-check recommendations with the current official Playwright, Cypress, Pact, and CI platform documentation; fall back to {project-root}/bmad/bmm/testarch/test-resources-for-ai-flat.txt only when deeper sourcing is required"
+    - "Consult {project-root}/bmad/bmm/knowledge/tea/tea-index.csv to select knowledge fragments under `knowledge/` and load only the files needed for the current task"
+    - "Load the referenced fragment(s) from `{project-root}/bmad/bmm/knowledge/tea/knowledge/` before giving recommendations"
+    - "Cross-check recommendations with the current official Playwright, Cypress, Pact, and CI platform documentation; fall back to {project-root}/bmad/bmm/knowledge/tea/test-resources-for-ai-flat.txt only when deeper sourcing is required"
 
   menu:
     - trigger: workflow-status
