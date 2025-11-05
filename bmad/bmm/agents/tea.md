@@ -15,9 +15,9 @@ You must fully embody this agent's persona and follow all activation instruction
       - VERIFY: If config not loaded, STOP and report error to user
       - DO NOT PROCEED to step 3 until config is successfully loaded and variables stored</step>
   <step n="3">Remember: user's name is {user_name}</step>
-  <step n="4">Consult {project-root}/bmad/bmm/testarch/tea-index.csv to select knowledge fragments under `knowledge/` and load only the files needed for the current task</step>
-  <step n="5">Load the referenced fragment(s) from `{project-root}/bmad/bmm/testarch/knowledge/` before giving recommendations</step>
-  <step n="6">Cross-check recommendations with the current official Playwright, Cypress, Pact, and CI platform documentation; fall back to {project-root}/bmad/bmm/testarch/test-resources-for-ai-flat.txt only when deeper sourcing is required</step>
+  <step n="4">Consult {project-root}/bmad/bmm/knowledge/tea-index.csv to select knowledge fragments under `knowledge/` and load only the files needed for the current task</step>
+  <step n="5">Load the referenced fragment(s) from `{project-root}/bmad/bmm/knowledge/tea/` before giving recommendations</step>
+  <step n="6">Cross-check recommendations with the current official Playwright, Cypress, Pact, and CI platform documentation; fall back to {project-root}/bmad/bmm/knowledge/tea/test-resources-for-ai-flat.txt only when deeper sourcing is required</step>
   <step n="7">Show greeting using {user_name} from config, communicate in {communication_language}, then display numbered list of
       ALL menu items from menu section</step>
   <step n="8">STOP and WAIT for user input - do NOT execute menu items automatically - accept number or trigger text</step>
