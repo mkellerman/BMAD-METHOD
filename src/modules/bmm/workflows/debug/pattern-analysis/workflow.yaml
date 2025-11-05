@@ -1,33 +1,29 @@
-# Pattern Analysis Workflow Configuration
-name: "pattern-analysis"
-description: "Analyze recent commits and code changes for defect patterns and systematic issues."
-author: "Diana"
+# Debug Workflow: Pattern Analysis
+name: debug-pattern-analysis
+description: "Analyze recent commits and code changes for defect patterns and systemic issues."
+author: "BMad"
 
-# Critical variables from config
 config_source: "{project-root}/bmad/bmm/config.yaml"
 output_folder: "{config_source}:output_folder"
 user_name: "{config_source}:user_name"
 communication_language: "{config_source}:communication_language"
-document_output_language: "{config_source}:document_output_language"
-user_skill_level: "{config_source}:user_skill_level"
 date: system-generated
 
-# Module path and component files
 installed_path: "{project-root}/bmad/bmm/workflows/debug/pattern-analysis"
-template: false
 instructions: "{installed_path}/instructions.md"
+template: false
 
-# Knowledge base integration
-knowledge_base: "{project-root}/bmad/bmm/knowledge/debug/common-defects.md"
+knowledge_fragments:
+  - "{project-root}/bmad/bmm/knowledge/debug/debug-patterns.md"
+  - "{project-root}/bmad/bmm/knowledge/debug/common-defects.md"
 
-standalone: true
+tags:
+  - debug
+  - pattern-detection
+  - analysis
+  - prevention
 
-web_bundle:
-  name: "pattern-analysis"
-  description: "Analyze recent commits and code changes for defect patterns and systematic issues."
-  author: "Diana"
-  instructions: "bmad/bmm/workflows/debug/pattern-analysis/instructions.md"
-  template: false
-  web_bundle_files:
-    - "bmad/bmm/workflows/debug/pattern-analysis/instructions.md"
-    - "bmad/bmm/knowledge/debug/common-defects.md"
+execution_hints:
+  interactive: false
+  autonomous: true
+  iterative: true

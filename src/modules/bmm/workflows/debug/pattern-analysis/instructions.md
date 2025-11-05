@@ -1,35 +1,199 @@
-# Pattern Analysis Instructions
+# pattern-detection
 
-## Overview
+Analyze code and commit history for defect patterns and systemic issues.
 
-Analyze recent commits, code changes, and development patterns to identify systematic defect patterns and areas of risk concentration.
+## Context
 
-## Analysis Dimensions
+This task identifies recurring defect patterns, systemic issues, and common problem areas to enable proactive quality improvements.
 
-1. **Temporal Patterns** - Timing of defect introduction
-2. **Spatial Patterns** - Code regions with high defect density
-3. **Author Patterns** - Developer-specific issue trends
-4. **Change Patterns** - Types of modifications causing issues
-5. **Dependency Patterns** - Component interaction problems
-6. **Testing Patterns** - Coverage gaps and blind spots
+## Task Execution
 
-## Process Steps
+### Step 1: Historical Analysis
 
-1. **Data Collection** - Gather commit history, bug reports, test results
-2. **Pattern Recognition** - Identify recurring defect categories
-3. **Hotspot Analysis** - Map defect concentration areas
-4. **Trend Analysis** - Track pattern evolution over time
-5. **Risk Assessment** - Evaluate pattern impact and likelihood
-6. **Prevention Strategy** - Recommend pattern-breaking interventions
+#### Recent Commits Analysis
 
-## Knowledge Integration
+1. Review last 20-50 commits for:
+   - Files frequently modified (hotspots)
+   - Repeated fix attempts
+   - Revert commits indicating instability
+   - Emergency/hotfix patterns
 
-Reference common defects catalog for pattern matching and classification of identified issues.
+#### Bug History Review
 
-## Expected Outputs
+1. Analyze recent bug reports for:
+   - Common symptoms
+   - Recurring locations
+   - Similar root causes
+   - Fix patterns
 
-- Defect pattern summary with frequency data
-- Risk hotspot identification and mapping
-- Trend analysis with predictive indicators
-- Targeted prevention recommendations
-- Process improvement suggestions
+### Step 2: Code Pattern Detection
+
+#### Anti-Pattern Identification
+
+Look for common problematic patterns:
+
+- God objects/functions (excessive responsibility)
+- Copy-paste code (DRY violations)
+- Dead code (unused functions/variables)
+- Complex conditionals (cyclomatic complexity)
+- Long parameter lists
+- Inappropriate intimacy (tight coupling)
+
+#### Vulnerability Patterns
+
+Check for security/reliability issues:
+
+- Input validation gaps
+- Error handling inconsistencies
+- Resource leak patterns
+- Race condition indicators
+- SQL injection risks
+- XSS vulnerabilities
+
+### Step 3: Architectural Pattern Analysis
+
+#### Dependency Issues
+
+- Circular dependencies
+- Version conflicts
+- Missing abstractions
+- Leaky abstractions
+- Inappropriate dependencies
+
+#### Design Smells
+
+- Violated SOLID principles
+- Missing design patterns where needed
+- Over-engineering indicators
+- Technical debt accumulation
+
+### Step 4: Team Pattern Analysis
+
+#### Development Patterns
+
+- Rush commits (end of sprint)
+- Incomplete implementations
+- Missing tests for bug fixes
+- Documentation gaps
+- Code review oversights
+
+#### Communication Patterns
+
+- Misunderstood requirements
+- Incomplete handoffs
+- Knowledge silos
+- Missing context in commits
+
+### Step 5: Pattern Correlation
+
+1. Group related patterns by:
+   - Component/module
+   - Developer/team
+   - Time period
+   - Feature area
+
+2. Identify correlations:
+   - Patterns that appear together
+   - Cascade effects
+   - Root pattern causing others
+
+## Output Format
+
+```markdown
+# Defect Pattern Analysis Report
+
+## Executive Summary
+
+[High-level overview of key patterns found]
+
+## Critical Patterns Detected
+
+### Pattern 1: [Pattern Name]
+
+**Type:** [Anti-pattern/Vulnerability/Design/Process]
+**Frequency:** [Number of occurrences]
+**Locations:**
+
+- [file:line]
+- [file:line]
+
+**Description:** [What the pattern is]
+**Impact:** [Why it matters]
+**Example:** [Code snippet or commit reference]
+**Recommendation:** [How to address]
+
+## Hotspot Analysis
+
+### High-Change Files
+
+1. [filename] - [change count] changes, [bug count] bugs
+2. [filename] - [change count] changes, [bug count] bugs
+
+### Complex Areas
+
+1. [component] - Complexity score: [number]
+2. [component] - Complexity score: [number]
+
+## Systemic Issues
+
+### Issue 1: [Issue Name]
+
+**Pattern Indicators:**
+
+- [Pattern that indicates this issue]
+- [Another indicator]
+
+**Root Cause:** [Underlying systemic problem]
+**Affected Areas:** [Components/teams affected]
+**Priority:** [Critical/High/Medium/Low]
+**Remediation Strategy:** [How to fix systematically]
+
+## Trend Analysis
+
+### Improving Areas
+
+- [Area showing positive trends]
+
+### Degrading Areas
+
+- [Area showing negative trends]
+
+### Stable Problem Areas
+
+- [Persistent issues not getting better or worse]
+
+## Recommendations
+
+### Immediate Actions
+
+1. [Quick win to address patterns]
+2. [Another quick action]
+
+### Short-term Improvements
+
+1. [1-2 sprint improvements]
+2. [Process changes needed]
+
+### Long-term Strategy
+
+1. [Architectural changes]
+2. [Team/process evolution]
+
+## Prevention Checklist
+
+- [ ] Add static analysis for [pattern]
+- [ ] Implement pre-commit hooks for [issue]
+- [ ] Create coding standards for [area]
+- [ ] Add automated tests for [vulnerability]
+- [ ] Improve documentation for [component]
+```
+
+## Completion Criteria
+
+- [ ] Historical analysis completed
+- [ ] Code patterns identified
+- [ ] Architectural issues found
+- [ ] Team patterns analyzed
+- [ ] Correlations established
+- [ ] Recommendations provided
+- [ ] Prevention strategies defined

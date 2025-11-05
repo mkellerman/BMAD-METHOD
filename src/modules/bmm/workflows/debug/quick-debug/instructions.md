@@ -1,31 +1,59 @@
-# Quick Debug Instructions
+# Quick Debug Workflow
 
-## Overview
+Rapid triage and initial analysis for simple issues.
 
-Perform rapid triage and initial analysis for simple issues requiring immediate attention or time-critical situations.
+## Context
 
-## When to Use
+This workflow provides fast initial assessment of bugs and issues, classifying severity and determining next steps without full formal inspection.
 
-- Production issues requiring immediate response
-- Simple bugs with obvious symptoms
-- Initial triage before deeper investigation
-- Time-critical debugging scenarios
+## Prerequisites
 
-## Process Steps
+- Bug description or symptom
+- Basic reproduction information
 
-1. **Symptom Capture** - Document observed behavior and error conditions
-2. **Environment Assessment** - Verify system state and recent changes
-3. **Pattern Matching** - Apply common debug patterns from knowledge base
-4. **Quick Verification** - Test immediate hypotheses
-5. **Triage Decision** - Determine if quick fix is appropriate or deeper analysis needed
+## Instructions
 
-## Knowledge Integration
+### Step 1: Initial Triage
 
-Leverage debug patterns guide for rapid pattern recognition and common issue resolution strategies.
+1. Ask user for issue description
+2. Classify severity (P0-P3)
+3. Determine urgency and impact
+4. Assess complexity (simple, moderate, complex)
 
-## Expected Outputs
+### Step 2: Quick Analysis
 
-- Issue classification and severity assessment
-- Initial hypothesis with supporting evidence
-- Quick fix recommendations (if applicable)
-- Escalation path for complex issues requiring full investigation
+1. Review error messages or symptoms
+2. Check for known patterns in `debug-patterns.md`
+3. Identify likely component or area
+4. Assess if quick fix is possible
+
+### Step 3: Recommend Next Steps
+
+Based on complexity:
+
+- **Simple:** Provide immediate fix suggestion
+- **Moderate:** Recommend `*root-cause` workflow
+- **Complex:** Recommend `*inspect` workflow for full Fagan inspection
+
+### Step 4: Document Findings
+
+Provide brief summary with:
+
+- Severity classification
+- Initial assessment
+- Recommended next steps
+- Estimated effort
+
+## Completion Criteria
+
+- [ ] Issue classified by severity
+- [ ] Initial assessment provided
+- [ ] Next steps recommended
+- [ ] Findings documented
+
+<elicit required="true">
+Issue Description: Ask user to describe:
+- What is happening?
+- Expected vs actual behavior
+- How critical is this?
+</elicit>
