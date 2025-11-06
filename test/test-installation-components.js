@@ -173,7 +173,7 @@ async function runTests() {
 
       assert(compiled.includes('tea-index.csv'), 'TEA agent compilation includes critical_actions with tea-index.csv reference');
 
-      assert(compiled.includes('testarch/knowledge'), 'TEA agent compilation includes knowledge base path');
+      assert(compiled.includes('knowledge/tea'), 'TEA agent compilation includes knowledge base path');
 
       assert(compiled.includes('*test-design'), 'TEA agent menu includes test-design workflow');
 
