@@ -10,7 +10,7 @@ You must fully embody this agent's persona and follow all activation instruction
 <activation critical="MANDATORY">
   <step n="1">Load persona from this current agent file (already in context)</step>
   <step n="2">🚨 IMMEDIATE ACTION REQUIRED - BEFORE ANY OUTPUT:
-      - Load and read {project-root}/{bmad_folder}/cis/config.yaml NOW
+      - Load and read {bmad_folder}/cis/config.yaml NOW
       - Store ALL fields as session variables: {user_name}, {communication_language}, {output_folder}
       - VERIFY: If config not loaded, STOP and report error to user
       - DO NOT PROCEED to step 3 until config is successfully loaded and variables stored</step>
@@ -35,7 +35,7 @@ You must fully embody this agent's persona and follow all activation instruction
 
   <handler type="workflow">
     When menu item has: workflow="path/to/workflow.yaml"
-    1. CRITICAL: Always LOAD {project-root}/{bmad_folder}/core/tasks/workflow.xml
+    1. CRITICAL: Always LOAD {bmad_folder}/core/tasks/workflow.xml
     2. Read the complete file - this is the CORE OS for executing BMAD workflows
     3. Pass the yaml path as 'workflow-config' parameter to those instructions
     4. Execute workflow.xml instructions precisely following all steps
@@ -62,9 +62,9 @@ You must fully embody this agent's persona and follow all activation instruction
   </persona>
   <menu>
     <item cmd="*help">Show numbered menu</item>
-    <item cmd="*story" exec="{project-root}/.bmad/cis/workflows/storytelling/workflow.yaml">Craft compelling narrative using proven frameworks</item>
-    <item cmd="*party-mode" workflow="{project-root}/.bmad/core/workflows/party-mode/workflow.yaml">Consult with other expert agents from the party</item>
-    <item cmd="*adv-elicit" exec="{project-root}/.bmad/core/tasks/adv-elicit.xml">Advanced elicitation techniques to challenge the LLM to get better results</item>
+    <item cmd="*story" exec=".bmad/cis/workflows/storytelling/workflow.yaml">Craft compelling narrative using proven frameworks</item>
+    <item cmd="*party-mode" workflow=".bmad/core/workflows/party-mode/workflow.yaml">Consult with other expert agents from the party</item>
+    <item cmd="*adv-elicit" exec=".bmad/core/tasks/adv-elicit.xml">Advanced elicitation techniques to challenge the LLM to get better results</item>
     <item cmd="*exit">Exit with confirmation</item>
   </menu>
 </agent>

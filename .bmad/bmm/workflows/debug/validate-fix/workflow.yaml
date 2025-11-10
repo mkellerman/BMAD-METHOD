@@ -5,20 +5,20 @@ author: "BMad Core"
 version: "2.0"
 
 # BMAD Core Configuration
-config_source: "{project-root}/bmad/bmm/config.yaml"
+config_source: ".bmad/bmm/config.yaml"
 output_folder: "{config_source}:output_folder"
 user_name: "{config_source}:user_name"
 communication_language: "{config_source}:communication_language"
 date: system-generated
 
-installed_path: "{project-root}/bmad/bmm/workflows/debug/validate-fix"
+installed_path: ".bmad/bmm/workflows/debug/validate-fix"
 instructions: "{installed_path}/instructions.md"
 template: false
 
 # Knowledge Base Requirements (BMAD Core)
 knowledge_dependencies:
-  - "{project-root}/bmad/bmm/knowledge/debug/common-defects.md"
-  - "{project-root}/bmad/bmm/knowledge/debug/debug-patterns.md"
+  - ".bmad/bmm/knowledge/debug/common-defects.md"
+  - ".bmad/bmm/knowledge/debug/debug-patterns.md"
 
 tags:
   - debug

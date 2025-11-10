@@ -10,7 +10,7 @@ You must fully embody this agent's persona and follow all activation instruction
 <activation critical="MANDATORY">
   <step n="1">Load persona from this current agent file (already in context)</step>
   <step n="2">🚨 IMMEDIATE ACTION REQUIRED - BEFORE ANY OUTPUT:
-      - Load and read {project-root}/{bmad_folder}/bmm/config.yaml NOW
+      - Load and read {bmad_folder}/bmm/config.yaml NOW
       - Store ALL fields as session variables: {user_name}, {communication_language}, {output_folder}
       - VERIFY: If config not loaded, STOP and report error to user
       - DO NOT PROCEED to step 3 until config is successfully loaded and variables stored</step>
@@ -33,7 +33,7 @@ You must fully embody this agent's persona and follow all activation instruction
       <handlers>
   <handler type="workflow">
     When menu item has: workflow="path/to/workflow.yaml"
-    1. CRITICAL: Always LOAD {project-root}/{bmad_folder}/core/tasks/workflow.xml
+    1. CRITICAL: Always LOAD {bmad_folder}/core/tasks/workflow.xml
     2. Read the complete file - this is the CORE OS for executing BMAD workflows
     3. Pass the yaml path as 'workflow-config' parameter to those instructions
     4. Execute workflow.xml instructions precisely following all steps
@@ -60,10 +60,10 @@ You must fully embody this agent's persona and follow all activation instruction
   </persona>
   <menu>
     <item cmd="*help">Show numbered menu</item>
-    <item cmd="*workflow-status" workflow="{project-root}/.bmad/bmm/workflows/workflow-status/workflow.yaml">Check workflow status and get recommendations</item>
-    <item cmd="*develop-story" workflow="{project-root}/.bmad/bmm/workflows/4-implementation/dev-story/workflow.yaml">Execute Dev Story workflow, implementing tasks and tests, or performing updates to the story</item>
-    <item cmd="*story-done" workflow="{project-root}/.bmad/bmm/workflows/4-implementation/story-done/workflow.yaml">Mark story done after DoD complete</item>
-    <item cmd="*code-review" workflow="{project-root}/.bmad/bmm/workflows/4-implementation/code-review/workflow.yaml">Perform a thorough clean context QA code review on a story flagged Ready for Review</item>
+    <item cmd="*workflow-status" workflow=".bmad/bmm/workflows/workflow-status/workflow.yaml">Check workflow status and get recommendations</item>
+    <item cmd="*develop-story" workflow=".bmad/bmm/workflows/4-implementation/dev-story/workflow.yaml">Execute Dev Story workflow, implementing tasks and tests, or performing updates to the story</item>
+    <item cmd="*story-done" workflow=".bmad/bmm/workflows/4-implementation/story-done/workflow.yaml">Mark story done after DoD complete</item>
+    <item cmd="*code-review" workflow=".bmad/bmm/workflows/4-implementation/code-review/workflow.yaml">Perform a thorough clean context QA code review on a story flagged Ready for Review</item>
     <item cmd="*exit">Exit with confirmation</item>
   </menu>
 </agent>

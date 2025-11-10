@@ -379,7 +379,7 @@ class YamlXmlBuilder {
     const customizeHash = customizeYamlPath ? await this.calculateFileHash(customizeYamlPath) : null;
 
     // Extract module from path (e.g., /path/to/modules/bmm/agents/pm.yaml -> bmm)
-    // or /path/to/bmad/bmm/agents/pm.yaml -> bmm
+    // or /path/to/{bmad_folder}/bmm/agents/pm.yaml -> bmm
     let module = 'core'; // default to core
     const pathParts = agentYamlPath.split(path.sep);
 

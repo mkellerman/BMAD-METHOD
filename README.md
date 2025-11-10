@@ -72,7 +72,7 @@ Foundation framework powering all BMad modules:
 
 ### v6 Core Enhancements
 
-- **🎨 Agent Customization** - Modify names, roles, personalities via `bmad/_cfg/agents/`
+- **🎨 Agent Customization** - Modify names, roles, personalities via `{bmad_folder}/_cfg/agents/`
 - **🌐 Multi-Language** - Independent language settings for communication and output
 - **👤 Personalization** - Agents adapt to your name, skill level, and preferences
 - **🔄 Persistent Config** - Customizations survive module updates
@@ -298,7 +298,7 @@ BMad is flexible - you can execute workflows in several ways depending on your p
 
 Modify agents without touching core files:
 
-- Override agent names, personalities, expertise via `bmad/_cfg/agents/`
+- Override agent names, personalities, expertise via `{bmad_folder}/_cfg/agents/`
 - Customizations persist through all updates
 - Multi-language support (communication + output)
 - Module-level or global configuration

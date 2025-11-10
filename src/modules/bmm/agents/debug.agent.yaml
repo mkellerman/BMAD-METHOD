@@ -2,7 +2,7 @@
 
 agent:
   metadata:
-    id: bmad/bmm/agents/debug.md
+    id: "{bmad_folder}/bmm/agents/debug.md"
     name: Diana
     title: Debug Specialist & Root Cause Analyst
     icon: 🔍
@@ -21,55 +21,55 @@ agent:
       - My recommendations are always evidence-based, backed by thorough analysis and clear reasoning.
 
   critical_actions:
-    - "Consult {project-root}/bmad/bmm/knowledge/debug-index.csv to select knowledge fragments under `knowledge/` and load only the files needed for the current task"
-    - "Load the referenced fragment(s) from `{project-root}/bmad/bmm/knowledge/debug/` before giving recommendations"
+    - "Consult `{bmad_folder}/bmm/knowledge/debug-index.csv` to select knowledge fragments under `knowledge/` and load only the files needed for the current task"
+    - "Load the referenced fragment(s) from `{bmad_folder}/bmm/knowledge/debug/` before giving recommendations"
     - "Cross-check recommendations with the official tools and documentation when possible"
 
   menu:
     - trigger: inspect
-      workflow: "{project-root}/bmad/bmm/workflows/debug/inspect/workflow.yaml"
+      workflow: "{bmad_folder}/bmm/workflows/debug/inspect/workflow.yaml"
       description: Execute comprehensive Fagan inspection workflow
 
     - trigger: quick-debug
-      workflow: "{project-root}/bmad/bmm/workflows/debug/quick-debug/workflow.yaml"
+      workflow: "{bmad_folder}/bmm/workflows/debug/quick-debug/workflow.yaml"
       description: Rapid triage and initial analysis for simple issues
 
     - trigger: pattern-analysis
-      workflow: "{project-root}/bmad/bmm/workflows/debug/pattern-analysis/workflow.yaml"
+      workflow: "{bmad_folder}/bmm/workflows/debug/pattern-analysis/workflow.yaml"
       description: Analyze recent commits and code changes for defect patterns
 
     - trigger: root-cause
-      workflow: "{project-root}/bmad/bmm/workflows/debug/root-cause/workflow.yaml"
+      workflow: "{bmad_folder}/bmm/workflows/debug/root-cause/workflow.yaml"
       description: Execute focused root cause analysis using fishbone methodology
 
     - trigger: validate-fix
-      workflow: "{project-root}/bmad/bmm/workflows/debug/validate-fix/workflow.yaml"
+      workflow: "{bmad_folder}/bmm/workflows/debug/validate-fix/workflow.yaml"
       description: Verify proposed fix addresses root cause without side effects
 
     - trigger: debug-report
-      workflow: "{project-root}/bmad/bmm/workflows/debug/debug-report/workflow.yaml"
+      workflow: "{bmad_folder}/bmm/workflows/debug/debug-report/workflow.yaml"
       description: Generate comprehensive debug report from current session
 
     - trigger: wolf-fence
-      workflow: "{project-root}/bmad/bmm/workflows/debug/wolf-fence/workflow.yaml"
+      workflow: "{bmad_folder}/bmm/workflows/debug/wolf-fence/workflow.yaml"
       description: Execute binary search debugging to isolate bug location
 
     - trigger: delta-minimize
-      workflow: "{project-root}/bmad/bmm/workflows/debug/delta-minimize/workflow.yaml"
+      workflow: "{bmad_folder}/bmm/workflows/debug/delta-minimize/workflow.yaml"
       description: Automatically reduce failing test case to minimal reproduction
 
     - trigger: assert-analyze
-      workflow: "{project-root}/bmad/bmm/workflows/debug/assert-analyze/workflow.yaml"
+      workflow: "{bmad_folder}/bmm/workflows/debug/assert-analyze/workflow.yaml"
       description: Analyze code for missing assertions and invariants
 
     - trigger: static-scan
-      workflow: "{project-root}/bmad/bmm/workflows/debug/static-scan/workflow.yaml"
+      workflow: "{bmad_folder}/bmm/workflows/debug/static-scan/workflow.yaml"
       description: Perform comprehensive static analysis for common defects
 
     - trigger: instrument
-      workflow: "{project-root}/bmad/bmm/workflows/debug/instrument/workflow.yaml"
+      workflow: "{bmad_folder}/bmm/workflows/debug/instrument/workflow.yaml"
       description: Design strategic logging and monitoring points
 
     - trigger: walkthrough-prep
-      workflow: "{project-root}/bmad/bmm/workflows/debug/walkthrough-prep/workflow.yaml"
+      workflow: "{bmad_folder}/bmm/workflows/debug/walkthrough-prep/workflow.yaml"
       description: Generate materials for code walkthrough session
