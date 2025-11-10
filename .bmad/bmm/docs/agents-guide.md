@@ -299,7 +299,7 @@ The BMad Method Module (BMM) provides a comprehensive team of specialized AI age
 
 **Special Capabilities:**
 
-- **Knowledge Base Access:** Consults comprehensive testing best practices from `testarch/knowledge/` directory
+- **Knowledge Base Access:** Consults comprehensive testing best practices from `knowledge/tea/` directory
 - **Framework Selection:** Smart framework selection (Playwright vs Cypress) with fixture architecture
 - **Cross-Platform Testing:** Supports testing across web, mobile, and API layers
 

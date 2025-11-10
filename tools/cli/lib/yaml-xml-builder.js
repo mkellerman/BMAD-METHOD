@@ -181,10 +181,10 @@ class YamlXmlBuilder {
 
     // Agent opening tag
     const agentAttrs = [
-      `id="${metadata.id || ''}"`,
-      `name="${metadata.name || ''}"`,
-      `title="${metadata.title || ''}"`,
-      `icon="${metadata.icon || '🤖'}"`,
+      `id="${this.escapeXml(metadata.id || '')}"`,
+      `name="${this.escapeXml(metadata.name || '')}"`,
+      `title="${this.escapeXml(metadata.title || '')}"`,
+      `icon="${this.escapeXml(metadata.icon || '🤖')}"`,
     ];
 
     // Add localskip attribute if present

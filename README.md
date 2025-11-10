@@ -218,7 +218,7 @@ The installer provides:
 
 ```
 your-project/
-└── bmad/
+└── .bmad/
     ├── core/         # Core framework + BMad Master agent
     ├── bmm/          # BMad Method (12 agents, 34 workflows)
     ├── bmb/          # BMad Builder (1 agent, 7 workflows)
