@@ -2,7 +2,7 @@
 
 # Test Framework Setup
 
-**Workflow ID**: `bmad/bmm/knowledge/tea/framework`
+**Workflow ID**: `{bmad_folder}/bmm/testarch/framework`
 **Version**: 4.0 (BMad v6)
 
 ---
@@ -189,7 +189,7 @@ Initialize a production-ready test framework architecture (Playwright or Cypress
 
 6. **Implement Fixture Architecture**
 
-   **Knowledge Base Reference**: `knowledge/tea/fixture-architecture.md`
+   **Knowledge Base Reference**: `testarch/knowledge/fixture-architecture.md`
 
    Create `tests/support/fixtures/index.ts`:
 
@@ -214,7 +214,7 @@ Initialize a production-ready test framework architecture (Playwright or Cypress
 
 7. **Implement Data Factories**
 
-   **Knowledge Base Reference**: `knowledge/tea/data-factories.md`
+   **Knowledge Base Reference**: `testarch/knowledge/data-factories.md`
 
    Create `tests/support/fixtures/factories/user-factory.ts`:
 
@@ -349,7 +349,7 @@ The generated `tests/README.md` should include:
 
 ### Knowledge Base Integration
 
-**Critical:** Consult `{project-root}/bmad/bmm/knowledge/tea/tea-index.csv` to identify and load relevant knowledge fragments:
+**Critical:** Consult `{project-root}/{bmad_folder}/bmm/testarch/tea-index.csv` to identify and load relevant knowledge fragments:
 
 - `fixture-architecture.md` - Pure function → fixture → `mergeTests` composition with auto-cleanup (406 lines, 5 examples)
 - `data-factories.md` - Faker-based factories with overrides, nested factories, API seeding, auto-cleanup (498 lines, 5 examples)
